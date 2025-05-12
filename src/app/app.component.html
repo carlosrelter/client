@@ -1,12 +1,44 @@
-<mat-toolbar>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span>My App</span>
-  <span class="example-spacer"></span>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav
+    class="sidenav"
+    #sidenav
+    [opened]="!isSmallScreen"
+    [fixedInViewport]="true"
+    [mode]="sidenavMode"
+    >
+    <mat-toolbar>
+      Client Control
+    </mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/home"><mat-icon>home</mat-icon> Home</a>
+      <a mat-list-item routerLink="/clients"><mat-icon>person</mat-icon>Clients</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="toolbar-menu">
+      <button
+        mat-icon-button
+        class="example-icon"
+        (click)="sidenav.toggle()"
+        aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>My App</span>
+      <span class="example-spacer"></span>
+    </mat-toolbar>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <router-outlet></router-outlet>
 
-</mat-toolbar>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
 
 
-<h1>teste</h1>
-<router-outlet />
+
