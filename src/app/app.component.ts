@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { BreakpointObserver } from '@angular/cdk/layout';
 
 import { MatIconModule } from '@angular/material/icon';
@@ -11,7 +11,7 @@ import { MatListModule } from '@angular/material/list';
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, MatToolbarModule, MatButtonModule, MatIconModule, MatSidenavModule,
-    MatListModule
+    MatListModule, RouterLink, RouterLinkActive
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
