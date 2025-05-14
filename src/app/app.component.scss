@@ -26,3 +26,13 @@ mat-toolbar{
 .main-content{
   margin-top: 80px;
 }
+
+a{
+  padding: 14px 24px;
+  margin:0;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  transition: 0.3s linear all;
+  mat-icon{margin-bottom: -5px; font-size:22px ;}
+}
