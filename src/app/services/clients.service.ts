@@ -10,10 +10,8 @@ import { Client } from '../shared/models/client';
 export class ClientsService {
 
   baseURL = `${enviroment.apiURL}clients`;
-  // private http = inject(HttpClient);
 
   constructor(private http: HttpClient) {}
-
 
   public getClients(): Observable<Client[]>{
     return this.http.get<Client[]>(`${this.baseURL}`);

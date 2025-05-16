@@ -5,8 +5,9 @@
 .sidenav{
   width: 250px;
   border: 1px;
-  background-color: #71bdf0;
-  border-radius: 0px;
+  background-color: #abc7ff;
+  border-radius: 10px;
+  border-right: solid;
 }
 
 mat-sidenav-content{
@@ -15,16 +16,12 @@ mat-sidenav-content{
 }
 
 mat-toolbar{
-  background-color: #71bdf0;
+  background-color: #abc7ff;
 
 }
 
 .toolbar-menu{
   position:fixed;
-}
-
-.main-content{
-  margin-top: 80px;
 }
 
 a{
@@ -35,4 +32,12 @@ a{
   justify-content: left;
   transition: 0.3s linear all;
   mat-icon{margin-bottom: -5px; font-size:22px ;}
+}
+
+.local-border{
+  border-width:20px;
+  margin-right:20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  margin-top: 80px;
 }

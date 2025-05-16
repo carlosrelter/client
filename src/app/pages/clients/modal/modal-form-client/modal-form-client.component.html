@@ -1,0 +1,39 @@
+<h2 mat-dialog-title>
+  {{ mode === 'create' ? 'Criar Item' : mode === 'edit' ? 'Editar Item' : 'Visualizar Item' }}
+</h2>
+<mat-dialog-content>
+  <form [formGroup]="form">
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" name="name">
+        <mat-hint></mat-hint>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Tipo</mat-label>
+        <input matInput formControlName="tipo" name="tipo">
+        <mat-hint></mat-hint>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Cellphone</mat-label>
+        <input matInput formControlName="cellphone" name="cellphone">
+        <mat-hint></mat-hint>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" name="email">
+        <mat-hint></mat-hint>
+      </mat-form-field>
+    </p>
+
+  </form>
+</mat-dialog-content>
+
+<div class="margin-ajust" align="end">
+  <!-- <button mat-button (click)="onClose()">Fechar</button> -->
+  <button mat-raised-button color="primary" (click)="onSave()">
+    {{ mode === 'edit' ? 'Salvar' : 'Criar' }}
+  </button>
+</div>
