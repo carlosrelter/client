@@ -1,7 +1,7 @@
 
 <div class="table-border" appearance="outlined">
   <h1>Clients</h1>
-  <button mat-raised-button (click)="openModalEditclient('create',client)">Create +</button>
+  <button mat-raised-button (click)="openModalClient('create',client)">Create +</button>
 
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
@@ -37,9 +37,9 @@
     <ng-container matColumnDef="action">
           <th class="th-table" mat-header-cell *matHeaderCellDef mat-sort-header> Actions </th>
           <td class="td-table" mat-cell *matCellDef="let client">
-            <mat-icon (click)="openModalEditclient('view',client)" >visibility</mat-icon>
-            <mat-icon (click)="openModalEditclient('edit',client)">edit</mat-icon>
-            <mat-icon (click)="openModalDeleteClient()">delete</mat-icon>
+            <mat-icon (click)="openModalClient('view',client)" >visibility</mat-icon>
+            <mat-icon (click)="openModalClient('edit',client)">edit</mat-icon>
+            <mat-icon (click)="openModalDeleteClient('delete',client)">delete</mat-icon>
           </td>
         </ng-container>
   </table>

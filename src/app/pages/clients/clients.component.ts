@@ -30,6 +30,10 @@ export class ClientsComponent {
   }
 
   ngOnInit():void{
+    this.getListClients();
+  }
+
+  getListClients(){
     this.service.getClients().subscribe({
       next:(clients: any)=>{
         this.dataSource = clients;
@@ -40,16 +44,39 @@ export class ClientsComponent {
     });
   }
 
-  openModalEditclient(mode: DialogMode,client: Client){
-    console.log("mode=",mode);
-    if(mode ==='view'){
-      console.log("teste ok");
-    }
-    this.dialog.open(ModalFormClientComponent,{
+  openModalClient(mode: DialogMode,client: Client){
+    const dialogRef = this.dialog.open(ModalFormClientComponent,{
       width:'575px',
       data:{mode,client}
-    })
+    });
+
+    dialogRef.afterClosed().subscribe(result=>{
+      if(result){
+        if(mode === 'create'){
+          this.service.postClient(result).subscribe(()=>
+            this.getListClients()
+          );
+        }else if(mode ==='edit'){
+          this.service.putClient(result.id!,result).subscribe(()=>
+            this.getListClients()
+          );
+        }
+        this.getListClients();
+      }
+    });
   }
 
-  openModalDeleteClient(){}
+  openModalDeleteClient(mode: DialogMode,client:Client){
+    const dialogRef = this.dialog.open(ModalFormClientComponent,{
+      width:'575px',
+      data:{mode, client}
+    });
+    dialogRef.afterClosed().subscribe(()=>{
+      this.service.deleteClientById(client.id!).subscribe(()=>{
+        this.getListClients();
+      })
+    });
+  }
+
+
 }

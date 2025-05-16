@@ -1,1 +1,1 @@
-export type DialogMode ='create'|'edit' |'view';
+export type DialogMode ='create'|'edit' |'view'| 'delete';
