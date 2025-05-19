@@ -1,13 +1,6 @@
 {
   "clients": [
     {
-      "id": "3",
-      "name": "Carlos Ferreira",
-      "cellphone": "21998765432",
-      "email": "carlos.fer@gmail.com",
-      "tipo": "standard"
-    },
-    {
       "id": "4",
       "name": "Ana Souza",
       "cellphone": "31987654321",
@@ -203,6 +196,5 @@
       "email": "samuel.ribeiro@gmail.com",
       "tipo": "standard"
     }
-
   ]
 }
