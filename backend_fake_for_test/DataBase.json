@@ -1,62 +1,6 @@
 {
   "clients": [
     {
-      "id": "5",
-      "name": "Lucas Silva",
-      "cellphone": "41998765432",
-      "email": "lucas.silva@gmail.com",
-      "tipo": "standard"
-    },
-    {
-      "id": "6",
-      "name": "Beatriz Costa",
-      "cellphone": "51987654321",
-      "email": "beatriz.costa@gmail.com",
-      "tipo": "premium"
-    },
-    {
-      "id": "7",
-      "name": "Pedro Mendes",
-      "cellphone": "61998765432",
-      "email": "pedro.mendes@gmail.com",
-      "tipo": "standard"
-    },
-    {
-      "id": "8",
-      "name": "Juliana Rocha",
-      "cellphone": "71987654321",
-      "email": "juliana.rocha@gmail.com",
-      "tipo": "premium"
-    },
-    {
-      "id": "9",
-      "name": "Roberto Lima",
-      "cellphone": "81998765432",
-      "email": "roberto.lima@gmail.com",
-      "tipo": "standard"
-    },
-    {
-      "id": "10",
-      "name": "Fernanda Ribeiro",
-      "cellphone": "91987654321",
-      "email": "fernanda.ribeiro@gmail.com",
-      "tipo": "premium"
-    },
-    {
-      "id": "11",
-      "name": "Gabriel Alves",
-      "cellphone": "11998765432",
-      "email": "gabriel.alves@gmail.com",
-      "tipo": "standard"
-    },
-    {
-      "id": "12",
-      "name": "Marcela Duarte",
-      "cellphone": "21987654321",
-      "email": "marcela.duarte@gmail.com",
-      "tipo": "premium"
-    },
-    {
       "id": "13",
       "name": "Vinícius Martins",
       "cellphone": "31998765432",
@@ -75,20 +19,6 @@
       "name": "Renato Barbosa",
       "cellphone": "51998765432",
       "email": "renato.barbosa@gmail.com",
-      "tipo": "standard"
-    },
-    {
-      "id": "16",
-      "name": "Bianca Santana",
-      "cellphone": "61987654321",
-      "email": "bianca.santana@gmail.com",
-      "tipo": "premium"
-    },
-    {
-      "id": "17",
-      "name": "Eduardo Pereira",
-      "cellphone": "71998765432",
-      "email": "eduardo.pereira@gmail.com",
       "tipo": "standard"
     },
     {
@@ -145,20 +75,6 @@
       "name": "Fernando Castro",
       "cellphone": "61998765432",
       "email": "fernando.castro@gmail.com",
-      "tipo": "standard"
-    },
-    {
-      "id": "26",
-      "name": "Rafaela Mendes",
-      "cellphone": "71987654321",
-      "email": "rafaela.mendes@gmail.com",
-      "tipo": "premium"
-    },
-    {
-      "id": "27",
-      "name": "Gustavo Silva",
-      "cellphone": "81998765432",
-      "email": "gustavo.silva@gmail.com",
       "tipo": "standard"
     },
     {

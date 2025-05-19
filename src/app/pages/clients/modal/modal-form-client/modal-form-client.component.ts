@@ -1,3 +1,4 @@
+import { MatIconModule } from '@angular/material/icon';
 import { Client } from './../../../../shared/models/client';
 import { Component, Inject } from '@angular/core';
 import { DialogMode } from '../../../../shared/models/dialog-mode';
@@ -10,7 +11,7 @@ import { ClientsService } from '../../../../services/clients.service';
 
 @Component({
   selector: 'app-modal-form-client',
-  imports: [ MatFormFieldModule, MatInputModule, MatDialogModule, ReactiveFormsModule, MatButtonModule],
+  imports: [ MatFormFieldModule, MatInputModule, MatDialogModule, ReactiveFormsModule, MatButtonModule, MatIconModule],
   templateUrl: './modal-form-client.component.html',
   styleUrl: './modal-form-client.component.scss'
 })
@@ -44,12 +45,11 @@ export class ModalFormClientComponent {
       tipo: [{value:this.data.client?.tipo || '',disabled: this.mode === 'view'}]
     });
 
-    this.idDelete =this.data.client?.id!;
-    console.log(this.idDelete);
   }
 
   deleteClient(){
-    this.dialogRef.close(this.form.value);
+    this.service.deleteClientById(this.data.client?.id!).subscribe();
+    this.onClose();
   }
 
   onClose(){

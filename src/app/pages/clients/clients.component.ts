@@ -78,7 +78,6 @@ export class ClientsComponent {
             this.getListClients()
           );
         }
-        this.getListClients();
       }
     });
   }
@@ -89,11 +88,10 @@ export class ClientsComponent {
       data:{mode, client}
     });
     dialogRef.afterClosed().subscribe(()=>{
-      this.service.deleteClientById(client.id!).subscribe(()=>{
         this.getListClients();
       })
-    });
-  }
+  };
+
 
 
 }
