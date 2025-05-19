@@ -1,9 +1,11 @@
+import { MatSort, MatSortModule } from '@angular/material/sort';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { ClientsService } from './../../services/clients.service';
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Client } from '../../shared/models/client';
 import { DialogMode } from '../../shared/models/dialog-mode';
 
-import { MatTableModule } from '@angular/material/table';
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { MatIcon } from '@angular/material/icon';
@@ -13,15 +15,22 @@ import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-clients',
-  imports: [MatTableModule, MatInputModule, MatCardModule, MatIcon ,MatDialogModule, MatButtonModule],
+  imports: [MatTableModule, MatInputModule, MatCardModule, MatIcon ,MatDialogModule, MatButtonModule,
+    MatSortModule, MatPaginatorModule
+  ],
   templateUrl: './clients.component.html',
   styleUrl: './clients.component.scss'
 })
 export class ClientsComponent {
 
   client!: Client;
-  dataSource: Client[] = [];
+  dataSource = new MatTableDataSource<Client>();
   displayedColumns: string[] = ['id', 'name', 'cellphone', 'email', 'tipo', 'action'];
+  listClient: Client[] =[];
+  resultsLength = 0;
+
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
 
   constructor(
     private service: ClientsService,
@@ -31,12 +40,20 @@ export class ClientsComponent {
 
   ngOnInit():void{
     this.getListClients();
+    console.log(this.dataSource.data);
+  }
+
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
   }
 
   getListClients(){
     this.service.getClients().subscribe({
-      next:(clients: any)=>{
-        this.dataSource = clients;
+      next:(result: Client[])=>{
+        this.dataSource.data = result;
+        this.dataSource.paginator = this.paginator;
+        this.dataSource.sort = this.sort;
       },
       error:(err)=>{
         console.log(err);

@@ -59,5 +59,8 @@ export class ModalFormClientComponent {
     if(this.form.valid && this.mode !== 'view'){
       this.dialogRef.close(this.form.value)
     }
+    if(this.mode ==='view'){
+      this.onClose();
+    }
   }
 }

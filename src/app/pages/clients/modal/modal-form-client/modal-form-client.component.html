@@ -48,7 +48,7 @@
   <div class="margin-ajust" align="end">
     <!-- <button mat-button (click)="onClose()">Fechar</button> -->
     <button mat-raised-button color="primary" (click)="onSave()">
-      {{ mode === 'edit' ? 'Salvar' : 'Criar' }}
+      {{ mode === 'create' ? 'Create' : mode === 'edit' ? 'Edit' : 'View' }}
     </button>
   </div>
 }

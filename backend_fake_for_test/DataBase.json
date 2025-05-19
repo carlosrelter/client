@@ -1,13 +1,6 @@
 {
   "clients": [
     {
-      "id": "4",
-      "name": "Ana Souza",
-      "cellphone": "31987654321",
-      "email": "ana.souza@gmail.com",
-      "tipo": "premium"
-    },
-    {
       "id": "5",
       "name": "Lucas Silva",
       "cellphone": "41998765432",
