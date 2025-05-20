@@ -33,9 +33,9 @@
     <ng-container matColumnDef="action">
       <th class="th-table" mat-header-cell *matHeaderCellDef mat-sort-header> Actions </th>
         <td class="td-table" mat-cell *matCellDef="let client">
-          <mat-icon (click)="openModalClient('view',client)" >visibility</mat-icon>
-          <mat-icon (click)="openModalClient('edit',client)">edit</mat-icon>
-          <mat-icon (click)="openModalDeleteClient('delete',client)">delete</mat-icon>
+          <mat-icon class="icon-table" (click)="openModalClient('view',client)" >visibility</mat-icon>
+          <mat-icon class="icon-table" (click)="openModalClient('edit',client)">edit</mat-icon>
+          <mat-icon class="icon-table-delete" (click)="openModalDeleteClient('delete',client)">delete</mat-icon>
         </td>
     </ng-container>
 

@@ -104,6 +104,13 @@
       "cellphone": "31998765432",
       "email": "samuel.ribeiro@gmail.com",
       "tipo": "standard"
+    },
+    {
+      "id": "b007",
+      "name": "Januario",
+      "cellphone": "11987654321",
+      "email": "janu@gmail.com",
+      "tipo": "premium"
     }
   ]
 }

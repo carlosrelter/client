@@ -1,3 +1,23 @@
 table{
   margin-top: 10px;
 }
+
+.icon-table{
+  color:gray;
+  transition: 0.3s linear all;
+  &:hover{
+    cursor:pointer;
+    color:blue;
+  }
+}
+
+.icon-table-delete{
+  color:gray;
+  transition: 0.3s linear all;
+  &:hover{
+    cursor:pointer;
+    color:red;
+
+  }
+}
+
