@@ -40,7 +40,6 @@ export class ClientsComponent {
 
   ngOnInit():void{
     this.getListClients();
-    console.log(this.dataSource.data);
   }
 
   ngAfterViewInit() {

@@ -25,15 +25,6 @@ export class AppComponent {
   ngAfterContentInit():void {
     this.breakpointObserver.observe(['(max-width: 800px)']).subscribe(
       (res) => this.isSmallScreen =res.matches
-      // {
-      // next:(res) =>{
-      //   if(res.matches){
-      //     this.isSmallScreen = true;
-      //   }else{
-      //     this.isSmallScreen = false;
-      //   }
-      // }
-    // }
     );
   }
 
