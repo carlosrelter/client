@@ -25,7 +25,7 @@ export class ClientsComponent {
 
   client!: Client;
   dataSource = new MatTableDataSource<Client>();
-  displayedColumns: string[] = ['id', 'name', 'cellphone', 'email', 'tipo', 'action'];
+  displayedColumns: string[] = ['id', 'name', 'cellphone', 'email', 'type', 'action'];
   listClient: Client[] =[];
   resultsLength = 0;
 

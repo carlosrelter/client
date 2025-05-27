@@ -32,8 +32,12 @@
           <mat-hint></mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline">
-          <mat-label>Tipo</mat-label>
-          <input matInput formControlName="tipo" name="tipo">
+          <mat-label>Type</mat-label>
+          <mat-select formControlName="type">
+            @for (type of typeClient; track type) {
+              <mat-option [value]="type.description">{{ type.description }}</mat-option>
+            }
+          </mat-select>
           <mat-hint></mat-hint>
         </mat-form-field>
       </p>
@@ -54,7 +58,6 @@
   </mat-dialog-content>
 
   <div class="margin-ajust" align="end">
-    <!-- <button mat-button (click)="onClose()">Fechar</button> -->
     <button mat-raised-button color="primary" (click)="onSave()">
       {{ mode === 'create' ? 'Create' : mode === 'edit' ? 'Edit' : 'View' }}
     </button>

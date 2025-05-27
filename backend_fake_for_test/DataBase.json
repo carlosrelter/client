@@ -5,112 +5,112 @@
       "name": "Vinícius Martins",
       "cellphone": "31998765432",
       "email": "vinicius.martins@gmail.com",
-      "tipo": "standard"
+      "type": "standard"
     },
     {
       "id": "14",
       "name": "Camila Nunes",
       "cellphone": "41987654321",
       "email": "camila.nunes@gmail.com",
-      "tipo": "premium"
+      "type": "premium"
     },
     {
       "id": "15",
       "name": "Renato Barbosa",
       "cellphone": "51998765432",
       "email": "renato.barbosa@gmail.com",
-      "tipo": "standard"
+      "type": "standard"
     },
     {
       "id": "18",
       "name": "Tatiane Farias",
       "cellphone": "81987654321",
       "email": "tatiane.farias@gmail.com",
-      "tipo": "premium"
+      "type": "premium"
     },
     {
       "id": "19",
       "name": "André Gomes",
       "cellphone": "91998765432",
       "email": "andre.gomes@gmail.com",
-      "tipo": "standard"
+      "type": "standard"
     },
     {
       "id": "20",
       "name": "Natália Cardoso",
       "cellphone": "11987654321",
       "email": "natalia.cardoso@gmail.com",
-      "tipo": "premium"
+      "type": "premium"
     },
     {
       "id": "21",
       "name": "Ricardo Torres",
       "cellphone": "21998765432",
       "email": "ricardo.torres@gmail.com",
-      "tipo": "standard"
+      "type": "standard"
     },
     {
       "id": "22",
       "name": "Letícia Lima",
       "cellphone": "31987654321",
       "email": "leticia.lima@gmail.com",
-      "tipo": "premium"
+      "type": "premium"
     },
     {
       "id": "23",
       "name": "Thiago Souza",
       "cellphone": "41998765432",
       "email": "thiago.souza@gmail.com",
-      "tipo": "standard"
+      "type": "standard"
     },
     {
       "id": "24",
       "name": "Vanessa Araújo",
       "cellphone": "51987654321",
       "email": "vanessa.araujo@gmail.com",
-      "tipo": "premium"
+      "type": "premium"
     },
     {
       "id": "25",
       "name": "Fernando Castro",
       "cellphone": "61998765432",
       "email": "fernando.castro@gmail.com",
-      "tipo": "standard"
+      "type": "standard"
     },
     {
       "id": "28",
       "name": "Sofia Barros",
       "cellphone": "91987654321",
       "email": "sofia.barros@gmail.com",
-      "tipo": "premium"
+      "type": "premium"
     },
     {
       "id": "29",
       "name": "Alberto Costa",
       "cellphone": "11998765432",
       "email": "alberto.costa@gmail.com",
-      "tipo": "standard"
+      "type": "standard"
     },
     {
       "id": "30",
       "name": "Karina Fernandes",
       "cellphone": "21987654321",
       "email": "karina.fernandes@gmail.com",
-      "tipo": "premium"
+      "type": "premium"
     },
     {
       "id": "31",
       "name": "Samuel Ribeiro",
       "cellphone": "31998765432",
       "email": "samuel.ribeiro@gmail.com",
-      "tipo": "standard"
+      "type": "standard"
     },
     {
       "id": "b007",
       "name": "Januario",
       "cellphone": "11987654321",
       "email": "janu@gmail.com",
-      "tipo": "premium"
+      "type": "premium"
     }
   ]
 }

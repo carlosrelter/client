@@ -2,21 +2,35 @@ import { MatIconModule } from '@angular/material/icon';
 import { Client } from './../../../../shared/models/client';
 import { Component, Inject } from '@angular/core';
 import { DialogMode } from '../../../../shared/models/dialog-mode';
-import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatFormFieldModule}  from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { ClientsService } from '../../../../services/clients.service';
+import { MatSelectModule } from '@angular/material/select';
 
 @Component({
   selector: 'app-modal-form-client',
-  imports: [ MatFormFieldModule, MatInputModule, MatDialogModule, ReactiveFormsModule, MatButtonModule, MatIconModule],
+  imports: [ MatFormFieldModule, MatInputModule, MatDialogModule, ReactiveFormsModule,
+     MatButtonModule, MatIconModule, MatSelectModule],
   templateUrl: './modal-form-client.component.html',
   styleUrl: './modal-form-client.component.scss'
 })
 export class ModalFormClientComponent {
 
+  typeClient =[
+    {
+      id:1,
+      description: 'STANDART'
+    },
+    {
+      id:2,
+      description: 'PREMIUM'
+    }
+  ];
+
+  id!: number;
   form!: FormGroup;
   mode! : DialogMode;
   client!:Client;
@@ -36,25 +50,46 @@ export class ModalFormClientComponent {
     this.buildForm();
   }
 
-  buildForm() {
+  buildForm(){
     this.form = this.fb.group({
-      ...(this.mode !== 'create' &&{id: [{ value:this.data.client?.id || '', disabled: this.mode === 'view'}]}),
-      name: [{ value:this.data.client?.name || '', disabled: this.mode === 'view'}],
-      cellphone: [ {value:this.data.client?.cellphone || '', disabled: this.mode === 'view'}],
-      email: [{value:this.data.client?.email || '',disabled: this.mode === 'view'}],
-      tipo: [{value:this.data.client?.tipo || '',disabled: this.mode === 'view'}]
+      id:[null],
+      name: [null],
+      cellphone: [null],
+      email: [null],
+      type: [null]
     });
 
+    if(this.mode === 'edit'){
+      this.fillForm();
+    }
+    if (this.mode === 'view') {
+      this.fillForm();
+      this.form.get('name')?.disable();
+      this.form.get('cellphone')?.disable();
+      this.form.get('email')?.disable();
+      this.form.get('type')?.disable();
+    }
+  }
+
+  fillForm(){
+    this.form.patchValue({
+      id:this.data.client?.id,
+      name: this.data.client?.name,
+      cellphone: this.data.client?.cellphone,
+      email: this.data.client?.email,
+      type: this.data.client?.type
+    });
   }
 
   deleteClient(){
-    this.service.deleteClientById(this.data.client?.id!).subscribe();
+    this.service.deleteClientById(this.data.client?.id!).subscribe(()=>this.getListClients());
     this.onClose();
   }
 
   onClose(){
     this.dialogRef.close();
   }
+
   onSave():void{
     if(this.form.valid && this.mode !== 'view'){
       this.dialogRef.close(this.form.value)
@@ -62,5 +97,9 @@ export class ModalFormClientComponent {
     if(this.mode ==='view'){
       this.onClose();
     }
+  }
+
+  getListClients(){
+    this.service.getClients().subscribe();
   }
 }
