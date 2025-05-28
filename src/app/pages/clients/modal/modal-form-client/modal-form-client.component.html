@@ -29,7 +29,9 @@
         <mat-form-field appearance="outline">
           <mat-label>Name</mat-label>
           <input matInput formControlName="name" name="name">
-          <mat-hint></mat-hint>
+          @if(form.controls['name'].invalid){
+            <mat-error>{{errorForm}}</mat-error>
+          }
         </mat-form-field>
         <mat-form-field appearance="outline">
           <mat-label>Type</mat-label>
@@ -38,19 +40,25 @@
               <mat-option [value]="type.description">{{ type.description }}</mat-option>
             }
           </mat-select>
-          <mat-hint></mat-hint>
+          @if(form.controls['type'].invalid){
+            <mat-error>{{errorForm}}</mat-error>
+          }
         </mat-form-field>
       </p>
       <p>
         <mat-form-field appearance="outline">
           <mat-label>Cellphone</mat-label>
           <input matInput formControlName="cellphone" name="cellphone">
-          <mat-hint></mat-hint>
+          @if(form.controls['cellphone'].invalid){
+            <mat-error>{{errorForm}}</mat-error>
+          }
         </mat-form-field>
         <mat-form-field appearance="outline">
           <mat-label>Email</mat-label>
           <input matInput formControlName="email" name="email">
-          <mat-hint></mat-hint>
+          @if(form.controls['email'].invalid){
+            <mat-error>{{errorForm}}</mat-error>
+          }
         </mat-form-field>
       </p>
 

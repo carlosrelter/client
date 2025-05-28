@@ -13,7 +13,7 @@ import { MatSelectModule } from '@angular/material/select';
 @Component({
   selector: 'app-modal-form-client',
   imports: [ MatFormFieldModule, MatInputModule, MatDialogModule, ReactiveFormsModule,
-     MatButtonModule, MatIconModule, MatSelectModule],
+     MatButtonModule, MatIconModule, MatSelectModule, ReactiveFormsModule],
   templateUrl: './modal-form-client.component.html',
   styleUrl: './modal-form-client.component.scss'
 })
@@ -37,6 +37,8 @@ export class ModalFormClientComponent {
   email:string |undefined;
   idDelete!: number;
 
+  errorForm: string ='write a valid value';
+
   constructor(
     private fb: FormBuilder,
     private dialogRef: MatDialogRef<ModalFormClientComponent>,
@@ -53,10 +55,10 @@ export class ModalFormClientComponent {
   buildForm(){
     this.form = this.fb.group({
       id:[null],
-      name: [null],
-      cellphone: [null],
-      email: [null],
-      type: [null]
+      name: [null, [Validators.required, Validators.minLength(2)]],
+      cellphone: [null, [Validators.required, Validators.minLength(8)]],
+      email: [null, [Validators.required, Validators.email]],
+      type: [null, Validators.required]
     });
 
     if(this.mode === 'edit'){
