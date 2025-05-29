@@ -10,8 +10,16 @@
       Client Control
     </mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="/home" routerLinkActive="active"><mat-icon>home</mat-icon> Home</a>
-      <a mat-list-item routerLink="/clients" ><mat-icon>person</mat-icon>Clients</a>
+      <div class="sidenav-content">
+
+        <div>
+          <a mat-list-item routerLink="/home" routerLinkActive="active"><mat-icon>home</mat-icon> Home</a>
+          <a mat-list-item routerLink="/clients" ><mat-icon>person</mat-icon>Clients</a>
+        </div>
+        <div class="login-ajust">
+          <button class="button-login" mat-list-item routerLink="/login"><mat-icon>login</mat-icon>Login</button>
+        </div>
+      </div>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
