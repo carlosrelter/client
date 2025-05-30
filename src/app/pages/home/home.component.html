@@ -1,3 +1,63 @@
-<h1>Home</h1>
+<mat-grid-list [cols]="hom" rowHeight="350px" gutterSize="16px">
+  <h1>Home</h1>
+  <mat-grid-tile>
+    <p>Neste espaço, futuramente serão exibidos detalhes sobre funcionalidades em desenvolvimento,
+       comunicados importantes e informações do usuário atualmente logado. A intenção é manter o
+       usuário sempre atualizado com as novidades do sistema e facilitar o acesso rápido a recursos
+       relevantes. Em breve, também poderão ser exibidas notificações personalizadas, atualizações do
+       sistema e atalhos para ações frequentes.</p>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <img class="home-image" src="assets/client-homt.png">
+  </mat-grid-tile>
+</mat-grid-list>
+<h2>Next Features</h2>
+<mat-grid-list [cols]="cols" rowHeight="250px" gutterSize="16px">
 
-<p>Here I will still edit and put details of future features, notices and the logged in user.</p>
+  <mat-grid-tile>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Login:</mat-card-title>
+        <mat-card-subtitle>To Do</mat-card-subtitle>
+      </mat-card-header>
+      <img class="img-card" src="assets/login.jpg">
+      <mat-card-content>
+        <p>
+          Security implementation
+        </p>
+      </mat-card-content>
+    </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Search:</mat-card-title>
+        <mat-card-subtitle>To Do</mat-card-subtitle>
+      </mat-card-header>
+      <img class="img-card" src="assets/lupa.jpg">
+      <mat-card-content>
+        <p>
+          Search implementation.
+        </p>
+      </mat-card-content>
+    </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Dashaboards:</mat-card-title>
+        <mat-card-subtitle>To Do</mat-card-subtitle>
+      </mat-card-header>
+      <img class="img-card" src="assets/grafico-de-pizza.png">
+      <mat-card-content>
+        <p>
+          Dashaboard impplementations
+        </p>
+      </mat-card-content>
+    </mat-card>
+    </mat-grid-tile>
+
+
+</mat-grid-list>
+
+
