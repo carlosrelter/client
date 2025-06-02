@@ -31,7 +31,9 @@
         aria-label="Example icon-button with menu icon">
         <mat-icon>menu</mat-icon>
       </button>
-      <span>My App</span>
+      @if( sidenavMode !== 'side'){
+        <span>Client Control</span>
+      }
       <span class="example-spacer"></span>
     </mat-toolbar>
     <div class="main-content local-border">
