@@ -7,11 +7,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, MatToolbarModule, MatButtonModule, MatIconModule, MatSidenavModule,
-    MatListModule, RouterLink, RouterLinkActive
+    MatListModule, RouterLink, RouterLinkActive, MatMenuModule, CommonModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
@@ -25,6 +27,7 @@ export class AppComponent {
   ngAfterContentInit():void {
     this.breakpointObserver.observe(['(max-width: 800px)']).subscribe(
       (res) => this.isSmallScreen =res.matches
+
     );
   }
 
