@@ -13,13 +13,13 @@
             <mat-icon>more_vert</mat-icon>
           </button>
           <mat-menu #menu="matMenu">
-          <button mat-menu-item>
+          <button mat-menu-item routerLink="/login">
           <mat-icon>login</mat-icon>
           <span>Login</span>
           </button>
-        <button mat-menu-item>
+        <button mat-menu-item routerLink="/register">
           <mat-icon>app_registration</mat-icon>
-          <span>Submit</span>
+          <span>Register</span>
         </button>
       </mat-menu>
       </div>
@@ -42,9 +42,9 @@
           <a mat-list-item routerLink="/home" routerLinkActive="active"><mat-icon>home</mat-icon> Home</a>
           <a mat-list-item routerLink="/clients" ><mat-icon>person</mat-icon>Clients</a>
         </div>
-        <div class="login-ajust">
-          <button class="button-login" mat-list-item routerLink="/login"><mat-icon>login</mat-icon>Login</button>
-        </div>
+        <!-- <div class="login-ajust">
+          <button class="button-login" mat-list-item ><mat-icon>login</mat-icon>Login</button>
+        </div> -->
       </div>
     </mat-nav-list>
   </mat-sidenav>
