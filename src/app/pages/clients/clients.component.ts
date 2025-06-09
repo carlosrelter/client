@@ -3,7 +3,7 @@ import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { ClientsService } from './../../services/clients.service';
 import { Component, ViewChild } from '@angular/core';
 import { Client } from '../../shared/models/client';
-import { DialogMode } from '../../shared/models/dialog-mode';
+import { DialogMode } from '../../shared/types/dialog-mode.type';
 
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';

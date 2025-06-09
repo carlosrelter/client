@@ -1,7 +1,7 @@
 import { MatIconModule } from '@angular/material/icon';
 import { Client } from './../../../../shared/models/client';
 import { Component, Inject } from '@angular/core';
-import { DialogMode } from '../../../../shared/models/dialog-mode';
+import { DialogMode } from '../../../../shared/types/dialog-mode.type';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatFormFieldModule}  from '@angular/material/form-field';
@@ -13,7 +13,7 @@ import { MatSelectModule } from '@angular/material/select';
 @Component({
   selector: 'app-modal-form-client',
   imports: [ MatFormFieldModule, MatInputModule, MatDialogModule, ReactiveFormsModule,
-     MatButtonModule, MatIconModule, MatSelectModule, ReactiveFormsModule],
+     MatButtonModule, MatIconModule, MatSelectModule ],
   templateUrl: './modal-form-client.component.html',
   styleUrl: './modal-form-client.component.scss'
 })
