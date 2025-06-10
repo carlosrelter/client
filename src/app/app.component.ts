@@ -9,11 +9,12 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { CommonModule } from '@angular/common';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, MatToolbarModule, MatButtonModule, MatIconModule, MatSidenavModule,
-    MatListModule, RouterLink, RouterLinkActive, MatMenuModule, CommonModule
+    MatListModule, RouterLink, RouterLinkActive, MatMenuModule, CommonModule, MatTooltipModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

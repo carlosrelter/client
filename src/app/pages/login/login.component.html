@@ -9,14 +9,18 @@
             <mat-form-field appearance="outline">
               <mat-label>E-mail</mat-label>
               <input matInput formControlName="email" name="email" type="text">
-              <mat-hint>Hint</mat-hint>
+              @if(formLogin.controls['email'].valid){
+                <mat-hint>{{errorForm}}</mat-hint>
+              }
             </mat-form-field>
           </p>
           <p>
             <mat-form-field appearance="outline">
               <mat-label>Password</mat-label>
               <input matInput formControlName="password" name="password" type="password">
-              <mat-hint>Hint</mat-hint>
+              @if(formLogin.controls['password'].valid){
+                <mat-hint>{{errorForm}}</mat-hint>
+              }
             </mat-form-field>
           </p>
         </form>
