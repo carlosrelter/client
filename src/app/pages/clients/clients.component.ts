@@ -76,6 +76,8 @@ export class ClientsComponent {
           this.service.putClient(result.id!,result).subscribe(()=>
             this.getListClients()
           );
+        }else if(mode ==='delete') {
+          this.service.getClients();
         }
       }
     });
